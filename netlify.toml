@@ -1,0 +1,11 @@
+[build]
+  base = "./"
+  publish = "dist"
+  command = "npm run build:client"
+
+# This redirects all routes to index.html for single-page application
+# This is necessary for React Router to work with client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
