@@ -1,12 +1,11 @@
-import { createRoot } from "react-dom/client";
-import { useEffect } from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import * as React from "react";
 
-// Make React available to browser dev tools in development
-if (import.meta.env.DEV) {
-  window.React = React;
-}
-
-createRoot(document.getElementById("root")!).render(<App />);
+// Simple render to test if React is working
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

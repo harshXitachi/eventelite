@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Direct React Test</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #app-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 400px;
+      text-align: center;
+    }
+    h1 {
+      color: #3B82F6;
+    }
+  </style>
+</head>
+<body>
+  <div id="app-container"></div>
+  
+  <script type="text/babel">
+    function App() {
+      return (
+        <div className="card">
+          <h1>Direct React Test</h1>
+          <p>If you can see this, React is working correctly!</p>
+          <p>This page doesn't use Vite bundling.</p>
+        </div>
+      );
+    }
+    
+    const root = ReactDOM.createRoot(document.getElementById('app-container'));
+    root.render(<App />);
+  </script>
+</body>
+</html> 
