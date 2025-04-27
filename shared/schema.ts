@@ -1,6 +1,7 @@
 import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+import { relations } from "drizzle-orm";
 
 // Base users table
 export const users = pgTable("users", {
@@ -55,6 +56,20 @@ export const insertVolunteerSchema = createInsertSchema(volunteerApplications).p
   position: true,
   experience: true,
 });
+
+// Relations
+export const usersRelations = relations(users, ({ many }) => ({
+  contacts: many(contactSubmissions),
+  volunteers: many(volunteerApplications),
+}));
+
+export const contactSubmissionsRelations = relations(contactSubmissions, ({ one }) => ({
+  // In the future, we may want to relate contacts to users
+}));
+
+export const volunteerApplicationsRelations = relations(volunteerApplications, ({ one }) => ({
+  // In the future, we may want to relate volunteers to users
+}));
 
 // Types
 export type InsertUser = z.infer<typeof insertUserSchema>;

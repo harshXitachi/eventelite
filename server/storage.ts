@@ -9,6 +9,8 @@ import {
   type VolunteerApplication,
   type InsertVolunteer
 } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 // modify the interface with any CRUD methods
 // you might need
@@ -23,71 +25,54 @@ export interface IStorage {
   getVolunteerApplications(): Promise<VolunteerApplication[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private contacts: Map<number, ContactSubmission>;
-  private volunteers: Map<number, VolunteerApplication>;
-  userCurrentId: number;
-  contactCurrentId: number;
-  volunteerCurrentId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.contacts = new Map();
-    this.volunteers = new Map();
-    this.userCurrentId = 1;
-    this.contactCurrentId = 1;
-    this.volunteerCurrentId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.userCurrentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   async insertContactSubmission(data: InsertContact): Promise<ContactSubmission> {
-    const id = this.contactCurrentId++;
-    const createdAt = new Date();
-    const submission: ContactSubmission = { 
-      ...data, 
-      id, 
-      createdAt 
-    };
-    this.contacts.set(id, submission);
+    const [submission] = await db
+      .insert(contactSubmissions)
+      .values({
+        ...data,
+        createdAt: new Date()
+      })
+      .returning();
     return submission;
   }
 
   async getContactSubmissions(): Promise<ContactSubmission[]> {
-    return Array.from(this.contacts.values());
+    return await db.select().from(contactSubmissions);
   }
 
   async insertVolunteerApplication(data: InsertVolunteer): Promise<VolunteerApplication> {
-    const id = this.volunteerCurrentId++;
-    const createdAt = new Date();
-    const application: VolunteerApplication = { 
-      ...data, 
-      id, 
-      createdAt 
-    };
-    this.volunteers.set(id, application);
+    const [application] = await db
+      .insert(volunteerApplications)
+      .values({
+        ...data,
+        createdAt: new Date()
+      })
+      .returning();
     return application;
   }
 
   async getVolunteerApplications(): Promise<VolunteerApplication[]> {
-    return Array.from(this.volunteers.values());
+    return await db.select().from(volunteerApplications);
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
