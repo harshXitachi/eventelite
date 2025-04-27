@@ -3,18 +3,18 @@ import React from "react";
 interface ServiceCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  bgColor: string;
+  icon: string;
 }
 
-const ServiceCard = ({ title, description, imageUrl }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, bgColor, icon }: ServiceCardProps) => {
   return (
     <div className="flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg">
-      <div className="relative h-48 w-full overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-        />
+      <div 
+        className="relative flex h-48 w-full items-center justify-center overflow-hidden" 
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="text-5xl text-white">{icon}</div>
       </div>
       <div className="p-4">
         <h3 className="mb-2 text-center text-xl font-semibold text-purple-700">{title}</h3>
@@ -33,32 +33,38 @@ const services = [
   {
     title: "Corporate Events",
     description: "Professional conferences, product launches, and team-building experiences",
-    imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#1142c7",
+    icon: "🏢"
   },
   {
     title: "Wedding Celebrations",
     description: "Bespoke wedding experiences from intimate gatherings to grand celebrations",
-    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#e84c93",
+    icon: "💍"
   },
   {
     title: "Social Gatherings",
     description: "Milestone celebrations, parties, and private functions",
-    imageUrl: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#8e44ad",
+    icon: "🎉"
   },
   {
     title: "Festival Management",
     description: "Cultural and music festivals, community events",
-    imageUrl: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#222",
+    icon: "🎵"
   },
   {
     title: "Exhibition Management",
     description: "Trade shows, art exhibitions, and industry expositions",
-    imageUrl: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#444",
+    icon: "🖼️"
   },
   {
     title: "Virtual Events",
     description: "Online conferences, webinars, and hybrid experiences",
-    imageUrl: "https://images.unsplash.com/photo-1609234656388-0ff363383899?auto=format&fit=crop&w=800&q=80",
+    bgColor: "#333",
+    icon: "💻"
   },
 ];
 
