@@ -46,6 +46,7 @@ const Navbar = () => {
           <a href="#testimonials" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Testimonials</a>
           <a href="#volunteer" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Volunteer</a>
           <a href="#blog" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Blog</a>
+          <a href="/calculator" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Cost Calculator</a>
           <a href="#contact" className="font-poppins bg-primary hover:bg-primary/80 text-white py-2 px-5 rounded-md transition duration-300 ml-4">Contact Us</a>
         </nav>
         
@@ -84,6 +85,7 @@ const Navbar = () => {
             <a href="#testimonials" onClick={closeMenu} className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Testimonials</a>
             <a href="#volunteer" onClick={closeMenu} className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Volunteer</a>
             <a href="#blog" onClick={closeMenu} className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Blog</a>
+            <a href="/calculator" onClick={closeMenu} className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Cost Calculator</a>
             <a href="#contact" onClick={closeMenu} className="font-poppins bg-primary hover:bg-primary/80 text-white py-2 px-5 rounded-md transition duration-300 text-center mt-4">Contact Us</a>
           </nav>
         </div>

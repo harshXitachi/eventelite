@@ -1,20 +1,29 @@
 import { useEffect } from "react";
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home";
+import EventCalculator from "@/pages/calculator";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 function Router() {
+  const [location] = useLocation();
+  const showNavAndFooter = location !== "/calculator";
+  
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      {showNavAndFooter && <Navbar />}
+      <Switch>
+        <Route path="/" component={HomePage} />
+        <Route path="/calculator" component={EventCalculator} />
+        <Route component={NotFound} />
+      </Switch>
+      {showNavAndFooter && <Footer />}
+    </>
   );
 }
 
@@ -49,9 +58,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Navbar />
         <Router />
-        <Footer />
       </TooltipProvider>
     </QueryClientProvider>
   );
