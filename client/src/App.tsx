@@ -9,6 +9,8 @@ import HomePage from "@/pages/home";
 import EventCalculator from "@/pages/calculator";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ChatAssistant from "@/components/ui/chat-assistant";
+import WhatsAppButton from "@/components/ui/whatsapp-button";
 
 function Router() {
   const [location] = useLocation();
@@ -59,6 +61,8 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <ChatAssistant />
+        <WhatsAppButton />
       </TooltipProvider>
     </QueryClientProvider>
   );
