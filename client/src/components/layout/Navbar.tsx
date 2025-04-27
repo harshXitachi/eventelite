@@ -40,27 +40,13 @@ const Navbar = () => {
         </div>
         
         <nav className="hidden lg:flex items-center space-x-8">
-          <Link href="#home">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Home</a>
-          </Link>
-          <Link href="#services">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Services</a>
-          </Link>
-          <Link href="#portfolio">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Portfolio</a>
-          </Link>
-          <Link href="#testimonials">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Testimonials</a>
-          </Link>
-          <Link href="#volunteer">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Volunteer</a>
-          </Link>
-          <Link href="#blog">
-            <a className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Blog</a>
-          </Link>
-          <Link href="#contact">
-            <a className="font-poppins bg-primary hover:bg-primary/80 text-white py-2 px-5 rounded-md transition duration-300 ml-4">Contact Us</a>
-          </Link>
+          <a href="#home" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Home</a>
+          <a href="#services" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Services</a>
+          <a href="#portfolio" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Portfolio</a>
+          <a href="#testimonials" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Testimonials</a>
+          <a href="#volunteer" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Volunteer</a>
+          <a href="#blog" className="font-montserrat text-sm font-semibold hover:text-primary transition duration-300">Blog</a>
+          <a href="#contact" className="font-poppins bg-primary hover:bg-primary/80 text-white py-2 px-5 rounded-md transition duration-300 ml-4">Contact Us</a>
         </nav>
         
         <button 

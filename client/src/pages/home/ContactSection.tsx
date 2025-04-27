@@ -82,6 +82,16 @@ const ContactSection = () => {
                     <div>
                       <h4 className="font-montserrat font-semibold mb-1">{item.title}</h4>
                       <p className="text-gray-700">{item.details}</p>
+                      {item.title === "Call Us" && (
+                        <a href="tel:+919785520040" className="inline-flex items-center text-primary hover:text-primary/80 mt-2 font-medium">
+                          <i className="fas fa-phone-alt mr-2"></i> Call Now
+                        </a>
+                      )}
+                      {item.title === "Email Us" && (
+                        <a href="mailto:info.eventeliteindia@gmail.com" className="inline-flex items-center text-primary hover:text-primary/80 mt-2 font-medium">
+                          <i className="fas fa-envelope mr-2"></i> Send Email
+                        </a>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -89,21 +99,22 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <h3 className="font-montserrat font-semibold text-2xl mb-6 text-primary">Follow Us</h3>
+              <h3 className="font-montserrat font-semibold text-2xl mb-6 text-primary">Connect With Us</h3>
               
               <div className="flex space-x-4">
-                <a href="#" className="bg-primary hover:bg-primary/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="bg-primary hover:bg-primary/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="bg-primary hover:bg-primary/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                  <i className="fab fa-linkedin-in"></i>
+                <a href="https://wa.me/919785520040" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                  <i className="fab fa-whatsapp"></i>
                 </a>
-                <a href="#" className="bg-primary hover:bg-primary/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
-                  <i className="fab fa-pinterest-p"></i>
-                </a>
+              </div>
+              
+              <div className="mt-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p className="text-sm text-gray-700">
+                  <i className="fas fa-info-circle text-primary mr-2"></i>
+                  Messages sent through this form will be forwarded to our WhatsApp for faster response.
+                </p>
               </div>
             </div>
           </div>

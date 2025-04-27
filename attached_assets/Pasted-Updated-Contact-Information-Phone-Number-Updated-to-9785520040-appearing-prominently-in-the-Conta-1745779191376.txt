@@ -1,0 +1,74 @@
+Updated Contact Information
+Phone Number: Updated to 9785520040, appearing prominently in the "Contact Us" section and used for the WhatsApp business link.
+
+Email: Updated to info.eventeliteindia.
+
+Instagram Link: Retained as the only social media link, pointing directly to this profile.
+
+Location Details: Replaced with "Jaipur and Delhi NCR," omitting full addresses for simplicity.
+
+Contact Us Section – Enhanced UI
+"Get in Touch" Features:
+
+A Call Button placed under the phone number that directly opens the dial pad, enabling one-tap calls.
+
+A Send Messages Feature: Messages sent via the website’s contact form will now forward directly to your WhatsApp number for seamless communication.
+
+Updated Design: Cleaner, more modern UI with animations, vibrant visuals, and interactive elements to enhance user experience.
+
+"We Are Hiring" Section – Highlighted and Expanded
+Enhanced Visibility: This section will now stand out more with a distinct design, engaging animations, and a prominent position on the homepage.
+
+Expanded Content:
+
+More positive reviews, featuring genuine feedback from Indian students or team members.
+
+Details on responsibilities: Assisting in event setup, coordinating with teams, guiding attendees, and ensuring smooth execution.
+
+Benefits: Flexible working hours, experience in event management, and opportunities in Jaipur and Delhi NCR.
+
+Application Form: Forwarded to your WhatsApp for direct communication.
+
+New Page: Event Management Calculator
+Purpose: A tool to help users estimate event costs based on parameters like event type, guest count, and services required.
+
+Status: Marked as "Under Construction" with a message directing users to contact you via WhatsApp.
+
+Additional Features
+AI-Powered Enhancements:
+24/7 Intelligent Chat Assistant:
+
+Handles initial inquiries and common questions.
+
+Available on all pages for seamless assistance.
+
+Quick Quote Generator:
+
+Calculates event costs based on user inputs, improving convenience for potential clients.
+
+Smart FAQ with Contextual Understanding:
+
+Provides tailored answers, ensuring users find the information they need.
+
+Seamless Handoff to Human Agents:
+
+Transfers complex inquiries to human representatives for a personal touch.
+
+Conversation History:
+
+Saves chat history for reference, making follow-ups efficient and client-friendly.
+
+Additional Suggestions
+Animated Features:
+
+Use subtle animations for transitions, button clicks, and hover effects to give the site a dynamic and engaging look.
+
+Add an animated banner on the homepage highlighting your services, reviews, and hiring opportunities.
+
+Testimonials Slider: Introduce a carousel for reviews to display multiple testimonials in an eye-catching way.
+
+Blog Integration: Expand your content offering by sharing insights, event planning tips, and behind-the-scenes stories.
+
+Pop-Up Notifications: Announce new features, hiring opportunities, or special offers via pop-ups.
+
+Live Event Tracker: Add a feature that updates clients on the progress of their events or volunteer coordination in real time.

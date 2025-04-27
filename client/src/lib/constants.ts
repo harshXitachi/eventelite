@@ -161,18 +161,18 @@ export const shortTestimonials = [
 export const volunteerBenefits = [
   {
     title: "Professional Development",
-    description: "Hands-on training and mentorship from experienced event managers, enhancing your skills and resume",
+    description: "Hands-on training and mentorship from experienced event managers, enhancing your skills and resume with real-world experience",
     icon: "fas fa-graduation-cap"
   },
   {
-    title: "Networking Opportunities",
-    description: "Connect with industry professionals, vendors, and potential employers at high-profile events",
-    icon: "fas fa-handshake"
+    title: "Flexible Working Hours",
+    description: "Balance your studies or other commitments with flexible scheduling options in Jaipur and Delhi NCR",
+    icon: "fas fa-clock"
   },
   {
-    title: "Compensation & Perks",
-    description: "Earn stipends, receive event passes, and enjoy exclusive experiences while building your career",
-    icon: "fas fa-coins"
+    title: "Career Advancement",
+    description: "Gain practical experience in event setup, team coordination, attendee guidance, and event execution",
+    icon: "fas fa-arrow-up"
   }
 ];
 
@@ -232,17 +232,17 @@ export const blogPosts = [
 export const contactInfo = [
   {
     title: "Our Location",
-    details: "EventElite House, 123 Luxury Lane, Mumbai, 400001",
+    details: "Jaipur and Delhi NCR",
     icon: "fas fa-map-marker-alt"
   },
   {
     title: "Call Us",
-    details: "+91 98765 43210",
+    details: "+91 9785520040",
     icon: "fas fa-phone-alt"
   },
   {
     title: "Email Us",
-    details: "events@eventelite.com",
+    details: "info.eventeliteindia@gmail.com",
     icon: "fas fa-envelope"
   },
   {

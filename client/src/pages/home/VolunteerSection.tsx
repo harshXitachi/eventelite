@@ -61,10 +61,11 @@ const VolunteerSection = () => {
   return (
     <section id="volunteer" className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-purple-blue text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in-section">
-          <h2 className="font-playfair font-bold text-3xl md:text-4xl mb-4">Join Our Volunteer Program</h2>
+        <div className="text-center mb-16 fade-in-section animate-pulse">
+          <span className="inline-block px-4 py-1 bg-accent text-white rounded-full text-sm font-bold mb-4">We Are Hiring!</span>
+          <h2 className="font-playfair font-bold text-3xl md:text-4xl mb-4">Join Our Event Management Team</h2>
           <p className="font-montserrat max-w-3xl mx-auto">
-            Gain valuable experience in event management while working alongside industry professionals
+            Gain valuable experience in event management while working alongside industry professionals in Jaipur and Delhi NCR
           </p>
         </div>
         
@@ -101,7 +102,14 @@ const VolunteerSection = () => {
           
           <div className="fade-in-section">
             <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h3 className="font-montserrat font-semibold text-2xl mb-6 text-primary">Apply to Volunteer</h3>
+              <h3 className="font-montserrat font-semibold text-2xl mb-6 text-primary">Apply to Join Our Team</h3>
+              
+              <div className="mb-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p className="text-sm text-gray-700">
+                  <i className="fas fa-info-circle text-primary mr-2"></i>
+                  Applications will be forwarded to our WhatsApp for faster review. We'll get back to qualified candidates promptly.
+                </p>
+              </div>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
